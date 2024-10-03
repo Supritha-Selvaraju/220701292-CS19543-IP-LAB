@@ -1,0 +1,109 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Droid-Sereif' serif;
+    background: white;
+    display: block;
+    align-items: center;
+}
+.title-container {
+    padding: 0;
+    margin: 0;
+    background-color: purple;
+    width: 100%; /* Adjusted width to 100% for better responsiveness */
+    height: auto;
+    color: aliceblue;
+    padding: 10px 0 10px 0;
+}
+.title-container h2{
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+    color:white;;
+}
+.title-container a{
+    color:inherit;
+    text-decoration: none
+}
+.title-container p{
+    text-align: center;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+.title-container h2 a:hover {
+    color: black;
+    cursor: pointer;
+}
+.menu-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 250px;
+    height: auto;
+}
+.menu-bar ul {
+    padding: 0;
+    margin: 10px;
+}
+.menu-bar ul li {
+    margin: 0;
+    padding: 0;
+}
+.menu-bar ul li a {
+    text-decoration:none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+.menu-bar ul li a:hover {
+    background-color: purple;
+}
+.content{
+    display: flex;
+    width:100%;
+}
+.index img{
+     width: 100%;
+     height:450px;
+}
+.index h3, .index p{
+    margin:0;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    padding-top:10px;
+    padding-bottom: 5px;
+}
+.opp, .fame, .intro, .lafa, .news, .index{
+    padding: 20px;
+    flex-grow: 1;
+}
+.intro h3, .opp h3, .fame h3, .lafa h3, .news h3{
+    color:purple;
+}
+.opp{
+    width:fit-content;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th, .fame td{
+    border: 1px solid grey;
+    background-color: white;
+    padding-top: 25px;
+    text-align: center;
+    color:rgb(70, 67, 67);
+}
+
+td{
+    border: 1px solid grey;
+    background-color: white;
+    padding-top: 25px;
+    text-align: left;
+}
+.news h3{
+    text-align: center;
+}
