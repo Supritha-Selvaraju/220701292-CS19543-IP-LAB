@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Alphabet Game</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #F487B6;
+        }
+        .bubble {
+            position: absolute;
+            font-size: 30px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <script>
+        // Screen dimensions
+        var width = screen.width - 100;
+        var height = screen.height - 200;
+
+        // Function to generate random alphabet
+        function generateRandomAlphabet() {
+            var charCode = Math.floor(Math.random() * 26) + 65; // Random char code between 65 and 90
+            return String.fromCharCode(charCode);
+        }
+
+        // Function to generate random color
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Function to create a new bubble
+        function createBubble() {
+            var letter = generateRandomAlphabet(); // Generate a random letter
+            var color = getRandomColor(); // Generate a random color
+
+            // Create a new bubble div
+            var $bubble = $('<div class="bubble"></div>') 
+                .text(letter) // Set the text to the generated letter
+                .css({
+                    'top': Math.random() * height + 'px', // Random vertical position
+                    'left': Math.random() * width + 'px', // Random horizontal position
+                    'background-color': color // Set background color
+                });
+
+            $('body').append($bubble); // Append the bubble to the body
+        }
+
+        // Event listener for keypress
+        $(document).keypress(function(event) {
+            console.log("Key pressed: " + event.key); // Debugging: check key
+            createBubble(); // Create a bubble each time a key is pressed
+        });
+    </script>
+
+</body>
+</html>
