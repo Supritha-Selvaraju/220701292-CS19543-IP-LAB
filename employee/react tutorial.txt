@@ -1,0 +1,25 @@
+C:\Users\Gunas\OneDrive\Desktop\react\New folder>npm create vite@latest
+Need to install the following packages:
+create-vite@5.5.4
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+√ Project name: ... client
+√ Select a framework: » React
+√ Select a variant: » JavaScript
+
+Scaffolding project in C:\Users\Gunas\OneDrive\Desktop\react\New folder\client...
+
+Done. Now run:
+
+  cd client
+  npm install
+  npm run dev
+
+
+C:\Users\Gunas\OneDrive\Desktop\react\New folder>mkdir server
+
+C:\Users\Gunas\OneDrive\Desktop\react\New folder>
